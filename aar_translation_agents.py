@@ -7,12 +7,19 @@ from typing import Optional
 from dotenv import load_dotenv
 import datetime
 import time
+from flask import Flask, request, Response
+
+# Initialize Flask app
+app = Flask(__name__)
+
+WEBHOOK_URL = "https://webhook-test.com/payload/dc123701-1324-4459-8286-25879cbb5561"
 
 class AARProcessor:
     def __init__(self, openai_api_key: Optional[str] = None):
         load_dotenv()
         OMNISTACK_API_KEY = os.getenv("OMNISTACK_API_KEY")
-        
+        MODEL = os.getenv("MODEL")
+
         # Initialize OpenAI client with Omnistack configuration
         self.client = OpenAI(
             base_url="https://api.omnistack.sh/openai/v1",
@@ -22,7 +29,7 @@ class AARProcessor:
         # Initialize agents with Omnistack configuration
         self.llm_config = {
             "client": self.client,
-            "model": "jonathan_simone_carmen"
+            "model": MODEL
         }
 
         # Initialize FileReadTool
@@ -209,6 +216,28 @@ class AARProcessor:
 
         return result, timings
 
+    def handle_memory_creation(self, memory_data):
+        """
+        Process the received memory creation data from Omi Friend.
+        """
+        # Example: Extract and save transcript
+        transcript = memory_data.get("transcript", "")
+        with open('voice_memos.md', 'a') as f:
+            f.write(f"## {memory_data.get('structured', {}).get('title', 'No Title')}\n")
+            f.write(f"{transcript}\n\n")
+        # Trigger further processing if needed
+
+processor = AARProcessor()
+
+@app.route('/omi_webhook', methods=['POST'])
+def omi_webhook():
+    try:
+        data = request.json
+        processor.handle_memory_creation(data)
+        return Response(status=200)
+    except Exception as e:
+        print(f"Error processing webhook: {e}")
+        return Response(status=500)
 
 def main():
     # Example usage
@@ -289,4 +318,10 @@ def main():
 
 
 if __name__ == "__main__":
+    # Run Flask app in a separate thread
+    from threading import Thread
+
+    flask_thread = Thread(target=lambda: app.run(port=5000, debug=True))
+    flask_thread.start()
+
     main()

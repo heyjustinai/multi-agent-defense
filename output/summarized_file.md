@@ -1,61 +1,39 @@
-```markdown
-# After Action Report (AAR) for Communications Training, Core Tasks (CT) Phase
+```
+**After Action Report (AAR) for Communications Training, Core Tasks (CT) Phase**
 
-**Date:** 22 October 2015  
-**From:** Captain Jeffrey D. Wright  
-**Subject:** After Action Report (AAR) for Communications Training, Core Tasks (CT) Phase
+**Context:**
+- **Title:** After Action Report (AAR) for Communications Training, Core Tasks (CT) Phase
+- **Date:** 22 October 2015
+- **From:** Captain Jeffrey D. Wright
 
-## 1. Purpose
-The purpose of this memorandum is to make suggestions for the continued effectiveness and improvement of communications training during the CT phase of Advanced Skills Training (AST).
+**Key Findings:**
+1. The current training duration of 10 days is insufficient for comprehensive communications training.
+2. Essential topics like SINCGARS waveforms, field expedient antennae, and wave propagation theory were not adequately covered.
+3. Instructor pressure enhanced learning but bordered on disrespectful.
 
-## 2. Overview
-Communications training in CT is intense, thorough, and well taught. It covers all the "must have" subjects, but this block still isn't given the time the subject deserves. We are sacrificing breadth and depth in order to ensure retention of the essentials -- which is the right decision, given the constraints. Given the importance of communications to the career field (especially in today's wars), we are under-resourcing this training.
+**Lessons Learned:**
+- Communications are crucial for the effectiveness of Combat Control Teams (CCTs); inadequate training compromises operational capabilities.
+- Stressful training environments are beneficial for developing troubleshooting skills under pressure but must balance professionalism.
 
-## 3. Observations and Recommended Improvements
+**Recommendations:**
+1. **Increase Training Duration:**
+   - Expand communications training by at least 5 days to allow for a detailed curriculum on key topics including SINCGARS and VRC-110 systems.
 
-### a. ITEM: Scope of Curriculum and Training Days Allocated
-#### (1) Discussion
-Only 10 training days were allocated for this training. It doesn't build on what was taught at CCS -- it repeats it and surpasses it. This meager investment in time stands in contrast to the importance of communications to the career field: no matter what mission a CCT is asked to perform, communications are the *sine qua non*. Without the ability to communicate, a CCT is at best a rifleman.
+2. **Enhance Curriculum:**
+   - Include comprehensive teaching on field-expedient and directional antennae, and detailed operating procedures for all communication systems relevant to CCT duties.
 
-> We are not teaching SINCGARS waveforms, although this is the primary means of secure transmissions among ground combat formations in the US Army and Marine Corps. HAVEQUICK is taught instead: this is important for communications with aircraft (UHF frequencies of 225-400 MHz), but is rarely used between ground units because UHF requires line of sight.
->
-> Field expedient antennae, directional antennae, vehicular communications, high frequency, and kit construction were not covered. Wave propagation theory was not covered in sufficient depth.
+3. **Professional Development of Instructors:**
+   - Maintain high-pressure training scenarios while ensuring professionalism and respect towards students.
 
-#### (2) Recommendations
-Expand this training by at least 5 days.
+4. **Implement Advanced Troubleshooting Events:**
+   - Create dedicated events focused on troubleshooting skills using malfunctioning equipment under realistic scenarios.
 
-> Continue to teach HAVEQUICK, but also teach SINCGARS. Teach field-expedient and directional antennae. Teach the VRC-110 system, et al. Teach the PRC-150 for medium-range HF communication: the most recent combat employment of Naval Surface Fire Support was by a USAF CCT, so it's easy to show that this is within the scope of our duties.
->
-> Make sure that teams have a full complement of kit issued to them before the start of CT. Developing kit that allows the user to simultaneously shoot, move, and communicate takes a lot of time and testing. It also requires connectors, cables, antenna relocation kits, zip ties, and the knowledge about how to make it all come together. Create physical training evolutions that require students to shoot, move, and communicate in order to prove the viability of their individual kit.
+5. **Reduce Repetitiveness in Training:**
+   - Limit repetitive exercises on basic VULOS frequencies and integrate new frequency systems such as SINCGARS to maintain engagement and effectiveness.
 
-### b. ITEM: Instructor Pressure and Troubleshooting
-#### (1) Discussion
-Instructors made a concerted effort to ramp up the pressure on students, teaching them to troubleshoot under pressure. Although it did border on disrespectful at times (which should be avoided), increasing the stress level is an excellent policy. Students definitely felt the pressure and it highlighted the importance of the communications skillset.
+**Supporting Details:**
+- The training emphasizes essential communication skills, crucial for operational success, highlighting the need for robust training frameworks in core tasks.
+- Practical demonstrations of equipment, troubleshooting methodologies, and respect during instruction are critical for developing a competent and capable team ready for operational challenges.
 
-> The instruction on how to troubleshoot programming was good; instruction on troubleshooting hardware was lacking.
-
-#### (2) Recommendations
-Keep up the pressure, but also keep it professional. Include a training event to teach troubleshooting to a higher standard. I did this at ANGLICO in the following manner:
-
-   a.  Direct radio repair shop to keep a separate stash of broken gear, with a tag for what's wrong with it.  
-   
-   b.  Set up 1 station per student, using one or more items of broken gear. Radios can be programmed correctly or incorrectly to add more difficulty. Students have their own reliable gear with them, which they can swap out to fix the problems.
-   
-   c.  Students must troubleshoot the radio's programming and attached hardware to find the deficiency or deficiencies.  
-   
-   d.  Radio checks are student's number plus what deficiency (or deficiencies) he corrected.
-
-> This kind of event is a great way to build confidence and ensure calmness when things go wrong.
-
-### c. ITEM: Repetitiveness
-#### (1) Discussion
-Practice makes permanent, and we did a good job of giving students the experience they needed on the fundamentals. That said, we approached a point of diminishing returns pretty quickly on hand-jamming basic VULOS frequencies. By TD4, we weren't getting a good return on investment from the time put into it.
-
-#### (2) Recommendations
-Less of the same type of frequency. Adding SINCGARS will help.
-
----
-
-**Jeffrey D. Wright, Capt, USAF**  
-**Special Tactics Officer**
+**End of AAR**
 ```

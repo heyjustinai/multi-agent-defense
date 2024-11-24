@@ -26,3 +26,16 @@
 | Total Crew Time | 238.54 |
 | Total Processing | 238.56 |
 
+
+## Run at 2024-11-23 22:33:01 - test.md
+
+| Step | Time (seconds) |
+|------|----------------|
+| Document Extraction (.md) | 0.00 |
+| Task 1: Process and structure the extracted document content | 13.25 |
+| Task 2: Translate the structured content from Ukrainian to English | 13.25 |
+| Task 3: Create a concise, actionable summary | 13.25 |
+| Task 4: Verify translation and summary quality | 13.25 |
+| Total Crew Time | 13.26 |
+| Total Processing | 13.26 |
+

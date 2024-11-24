@@ -1,7 +1,8 @@
-crewai==0.28.8
-crewai-tools==0.1.6
+crewai==0.80.0
+crewai-tools==0.14.0
+langchain==0.3.8
 langchain-community==0.3.8
-langchain>=0.3.8
+langchain-core==0.3.21
 langchain-openai>=0.2.9
 embedchain>=0.1.125
 instructor>=1.6.4

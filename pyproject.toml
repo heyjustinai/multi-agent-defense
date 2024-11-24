@@ -7,10 +7,12 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = ">=3.10,<=3.13"
-crewai = "0.28.8"
-crewai-tools = "0.1.6"
-langchain-community = "0.0.29"
-pypdf2 = "^3.0.0"
+crewai = "0.80.0"
+crewai-tools = "0.14.0"
+langchain = "0.3.8"
+langchain-community = "0.3.8"
+langchain-core = "0.3.21"
+pypdf = "^5.1.0"
 python-dotenv = "^1.0.0"
 
 [build-system]

@@ -1,6 +1,7 @@
 from PyPDF2 import PdfReader
 import os
 from crewai import Agent, Task, Crew
+from crewai_tools import FileReadTool
 from openai import OpenAI
 from typing import Optional
 from dotenv import load_dotenv
@@ -23,6 +24,9 @@ class AARProcessor:
             "model": "jonathan_simone_carmen"
         }
 
+        # Initialize FileReadTool
+        self.file_reader = FileReadTool(file_path='./docs/test.md')
+
         # Initialize agents
         self.document_processor = self._create_document_processor()
         self.translator = self._create_translator()
@@ -38,6 +42,7 @@ class AARProcessor:
             "structure and importance of military documentation and "
             "can effectively extract all relevant information from various document formats.",
             allow_delegation=False,
+            tools = [self.file_reader],
             verbose=True,
             llm_config=self.llm_config
         )
@@ -157,6 +162,7 @@ class AARProcessor:
         task3 = Task(
             description="Create a concise, actionable summary",
             agent=self.summarizer,
+            output_file="summarized_file.md",
             context=[{
                 "description": "Create a summary of the translated AAR",
                 "input": "{{previous_task.output}}",
@@ -166,18 +172,18 @@ class AARProcessor:
         )
         tasks.append(task3)
 
-        # Task 4: Quality Check
-        task4 = Task(
-            description="Verify translation and summary quality",
-            agent=self.quality_checker,
-            context=[{
-                "description": "Review the translation and summary",
-                "input": "{{previous_task.output}}",
-                "expected_output": "A quality assessment report"
-            }],
-            expected_output="A confirmation that the translation and summary meet quality standards"
-        )
-        tasks.append(task4)
+        # # Task 4: Quality Check
+        # task4 = Task(
+        #     description="Verify translation and summary quality",
+        #     agent=self.quality_checker,
+        #     context=[{
+        #         "description": "Review the translation and summary",
+        #         "input": "{{previous_task.output}}",
+        #         "expected_output": "A quality assessment report"
+        #     }],
+        #     expected_output="A confirmation that the translation and summary meet quality standards"
+        # )
+        # tasks.append(task4)
 
         # Create and run the crew
         crew_start_time = time.time()

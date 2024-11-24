@@ -6,8 +6,6 @@ from typing import Optional
 from dotenv import load_dotenv
 import datetime
 import time
-import docx
-
 
 class AARProcessor:
     def __init__(self, openai_api_key: Optional[str] = None):
@@ -87,49 +85,25 @@ class AARProcessor:
         )
 
     def extract_text_from_file(self, file_path: str) -> str:
-        """Extract text content from a document file (PDF, DOC, or DOCX)."""
+        """Extract text content from a markdown file."""
         try:
             file_extension = os.path.splitext(file_path)[1].lower()
 
-            if file_extension == '.pdf':
-                return self._extract_from_pdf(file_path)
-            elif file_extension in ['.doc', '.docx']:
-                return self._extract_from_docx(file_path)
+            if file_extension == '.md':
+                return self._extract_from_markdown(file_path)
             else:
                 raise ValueError(f"Unsupported file format: {file_extension}")
 
         except Exception as e:
             raise Exception(f"Error extracting text from file: {str(e)}")
 
-    def _extract_from_pdf(self, file_path: str) -> str:
-        """Extract text from PDF file."""
-        reader = PdfReader(file_path)
-        text = ""
-        for page in reader.pages:
-            text += page.extract_text() + "\n"
-        return text
-
-    def _extract_from_docx(self, file_path: str) -> str:
-        """Extract text from DOC/DOCX file."""
-        doc = docx.Document(file_path)  
-        paragraphs = []
-
-        # Extract text from paragraphs
-        for paragraph in doc.paragraphs:
-            if paragraph.text.strip():
-                paragraphs.append(paragraph.text)
-
-        # Extract text from tables
-        for table in doc.tables:
-            for row in table.rows:
-                row_text = []
-                for cell in row.cells:
-                    if cell.text.strip():
-                        row_text.append(cell.text.strip())
-                if row_text:
-                    paragraphs.append(" | ".join(row_text))
-
-        return "\n".join(paragraphs)
+    def _extract_from_markdown(self, file_path: str) -> str:
+        """Extract text from markdown file."""
+        try:
+            with open(file_path, 'r', encoding='utf-8') as file:
+                return file.read()
+        except Exception as e:
+            raise Exception(f"Error reading markdown file: {str(e)}")
 
     def process_aar(self, file_path: str):
         timings = []
@@ -171,8 +145,7 @@ class AARProcessor:
             description="Translate the structured content from Ukrainian to English",
             agent=self.translator,
             context=[{
-                "description": "Translate the processed content",
-                # This will be replaced with actual output
+                "description": "Translate the structured AAR content",
                 "input": "{{previous_task.output}}",
                 "expected_output": "An accurate English translation"
             }],
@@ -185,8 +158,7 @@ class AARProcessor:
             description="Create a concise, actionable summary",
             agent=self.summarizer,
             context=[{
-                "description": "Generate a clear summary",
-                # This will be replaced with actual output
+                "description": "Create a summary of the translated AAR",
                 "input": "{{previous_task.output}}",
                 "expected_output": "A concise, actionable summary"
             }],
@@ -200,7 +172,6 @@ class AARProcessor:
             agent=self.quality_checker,
             context=[{
                 "description": "Review the translation and summary",
-                # This will be replaced with actual output
                 "input": "{{previous_task.output}}",
                 "expected_output": "A quality assessment report"
             }],
@@ -256,7 +227,7 @@ def main():
 
     # Process all files in docs directory
     docs_dir = "docs"
-    supported_extensions = ['.pdf', '.doc', '.docx']
+    supported_extensions = ['.md']
 
     if not os.path.exists(docs_dir):
         print(f"Error: Directory '{docs_dir}' does not exist!")

@@ -1,3 +1,10 @@
+# After-Action Report Analysis
+
+Generated on: 2024-11-24 12:53:39
+Source file: sample_aar.md
+
+## Analysis Results
+
 **After Action Report (AAR) for Communications Training, Core Tasks (CT) Phase**  
 **Date:** 22 October 2015  
 **Prepared by:** Captain Jeffrey D. Wright  
@@ -13,7 +20,7 @@ This memorandum aims to provide suggestions for the continued effectiveness and 
 - Increased pressure during training enhances students' ability to troubleshoot under stress but must be managed professionally.
 
 ### 3. Lessons Learned
-- Communications are critical across all missions; without effective communication, operational effectiveness diminishes significantly. 
+- Communications are critical across all missions; without effective communication, operational effectiveness diminishes significantly.
 - The ongoing training should incorporate realistic scenarios that allow students to engage with the equipment in a dynamic environment.
 - Balancing depth and breadth in training is needed to ensure competencies are developed sufficiently.
 
@@ -33,7 +40,7 @@ This memorandum aims to provide suggestions for the continued effectiveness and 
 - Current training only allocated 10 days, which is insufficient given the comprehensive nature of communications training required.
 - SINCGARS waveforms, which are critical for ground combat formations, were not taught, while HAVEQUICK was unnecessarily emphasized.
 - The lack of hardware troubleshooting instruction indicated a gap in the curriculum that could lead to deficiencies during actual operations.
-  
+
 ---
 
 **Conclusion:** Adjusting the training structure, improving the professional atmosphere of pressure applied during training, and refining the focus of the curriculum will enhance the effectiveness of communications training for Combat Control Teams, ultimately improving mission outcomes. 

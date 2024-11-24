@@ -1,3 +1,10 @@
+# After-Action Report Analysis
+
+Generated on: 2024-11-24 11:34:34
+Source file: sample_aar.md
+
+## Analysis Results
+
 **After Action Report (AAR) for Communications Training, Core Tasks (CT) Phase**
 
 **Context:**

@@ -1,21 +1,44 @@
-Mission Overview: The AAR pertains to a communications training session during the Core Tasks phase of Advanced Skills Training. The training is intense and thorough, covering essential topics but given the significance of communication in the field, it's still under-resourced.
+**After Action Report (AAR) for Communications Training, Core Tasks (CT) Phase**
 
-Key Lessons Learned:
-1. Scope of Curriculum and Training Days Allocated - The training only spans 10 days, merely repeating and surpassing what was taught at CCS. It does not sufficiently cover SINCGARS waveforms, field expedient antennae, directional antennae, vehicular communications, high frequency, and kit construction. 
+**Context:**
+This After Action Report is intended to capture observations and recommendations following the communications training phase of Advanced Skills Training (AST) conducted on 22 October 2015 under the guidance of Captain Jeffrey D. Wright. The focus is on assessing the effectiveness and suggesting improvements for the communications training element, which plays a crucial role in military operations.
 
-2. Instructor Pressure and Troubleshooting - The high-pressure environment created by the instructors is beneficial for the students as it teaches them to troubleshoot under pressure, however, it bordered on disrespectful at times. Also, while the instruction on troubleshooting programming was good, instruction on hardware was lacking.
+**Key Findings:**
+1. **Scope of Curriculum and Time Allocation:**
+   - Only 10 training days were allocated, which is insufficient for thorough coverage of communications topics critical to operations.
+   - Essential topics such as SINCGARS waveforms and advanced antenna techniques were not adequately addressed.
 
-3. Repetitiveness - While practice is vital, the training reached a point of diminishing returns quickly by emphasizing on the same type of frequency.
+2. **Instructor Pressure and Troubleshooting:**
+   - Instructors successfully increased the pressure on students to simulate stress in operational environments; however, this sometimes bordered on disrespectful.
+   - Instruction on troubleshooting hardware was found lacking compared to programming troubleshooting.
 
-Critical Action Items: 
-1. Extend this training by at least 5 additional days
-2. Teach SINCGARS waveforms
-3. Include a higher standard for troubleshooting training, with a specific process
-4. Diminish repetitiveness by diversifying frequency types
+3. **Repetitiveness in Training:**
+   - The repetitive nature of training on basic VULOS frequencies reached a point of diminishing returns, indicating a need for varied practice.
 
-Precautions: Maintain high-pressure training but ensure it remains respectful.
+**Lessons Learned:**
+- Effective communications are vital for operational success, and adequate training resources must reflect this necessity.
+- Increasing pressure in training scenarios is beneficial for learning, but it must be balanced with professionalism to maintain respect and morale.
+- Diversification in training frequency practice is crucial to ensure meaningful learning and retention.
 
-Recommendations: 
-1. Expand the communications training by at least 5 additional days and include SINCGARS waveforms, field expedient and directional antennae, vehicular communications, high frequency, and kit construction in the curriculum.
-2. Ramp up the pressure, but ensure it stays professional. Implement a unique training event to teach troubleshooting to a higher standard. 
-3. Introduce more diversity into the frequency types used for practice to avoid a situation of diminishing returns.
+**Recommendations:**
+1. **Expand Training Duration:**
+   - Increase the allocated days for communications training by at least 5 days to enhance curriculum breadth and depth.
+
+2. **Enhance Curriculum Content:**
+   - Include instruction on SINCGARS alongside HAVEQUICK.
+   - Cover topics such as field expedient and directional antennae, and ensure comprehensive training on HF communications using the VRC-110 system and PRC-150.
+
+3. **Maintain Instructor Pressure, Yet Professionalism:**
+   - Continue to utilize stress in training scenarios, but ensure it remains respectful and constructive.
+   - Initiate higher standard troubleshooting training through the establishment of practical problem-solving exercises with broken gear for students.
+
+4. **Reduce Repetitiveness:**
+   - Limit the repetition of similar frequency training to avoid diminishing returns on learning.
+
+**Relevant Supporting Details:**
+- Depending on mission requirements, communication proficiency is the backbone of operational success; neglecting its training represents a critical risk.
+- Structured troubleshooting training events can build confidence and competence under pressure, better preparing students for real-world challenges.
+
+**Prepared by:**
+JEFFREY D. WRIGHT, Capt, USAF  
+Special Tactics Officer

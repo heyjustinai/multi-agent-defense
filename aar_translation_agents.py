@@ -18,7 +18,7 @@ class AARProcessor:
     def __init__(self, openai_api_key: Optional[str] = None):
         load_dotenv()
         OMNISTACK_API_KEY = os.getenv("OMNISTACK_API_KEY")
-        MODEL = os.getenv("MODEL")
+        MODEL = "vito_eunice_belle"
 
         # Initialize OpenAI client with Omnistack configuration
         self.client = OpenAI(

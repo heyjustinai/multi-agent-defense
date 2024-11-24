@@ -19,3 +19,4 @@ AI Agents
 	•	Focus on improving the quality of the AI agent’s responses and overall output.
     2.  Create synthetic Ukrainian AAR (to test translation)
     3.  Make it handle all AAR documents -> create knowledge graph
+    4.  Jeff USAFSOC - want to chat with thousands of AAR's and be able to sumamrize, synthesize, and uncover trends, patterns, and insights

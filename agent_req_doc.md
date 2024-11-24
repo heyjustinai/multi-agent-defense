@@ -1,32 +1,67 @@
-Product Requirements Document (PRD): AI Agent for Translating and Summarizing Ukrainian After-Action Reports (AARs)
+Product Requirements Document (PRD): AI Assistant for Military Operations
 
-1. Objective
+1. Introduction
 
-Develop an AI Agent capable of translating Ukrainian After-Action Reports (AARs) in Microsoft Word (.docx) format into concise, actionable English summaries. The translation must preserve all semantics, nuances, cultural slang, and context to ensure frontline soldiers receive clear and pertinent information swiftly.
+In modern military operations, timely access to actionable intelligence is critical for mission success. The proposed AI Assistant aims to enhance operational preparedness by providing military personnel with real-time, context-aware insights extracted from classified operational data. This assistant leverages advanced natural language processing to interpret and summarize key factors that influence mission planning.
 
-2. Key Requirements
+METT-TC—an acronym for Mission, Enemy, Terrain and Weather, Troops and Support Available, Time Available, and Civil Considerations—is a framework used by the military to assess and plan missions. Understanding and analyzing METT-TC factors are crucial for effective decision-making on the battlefield.
 
-2.1 Data Ingestion
-    •    The AI Agent shall accept Ukrainian AARs in .docx format.
-    •    It shall extract all text content, including headers, footers, and embedded tables, ensuring no information is overlooked.
+2. Objective
 
-2.2 Translation
-    •    The AI Agent shall employ advanced Natural Language Processing (NLP) models trained in Ukrainian-English translation, with a focus on military terminology and slang.
-    •    It shall accurately handle idiomatic expressions and cultural references, maintaining the original report’s intent and context.
+The goal is to develop a secure, intelligent AI assistant capable of ingesting, translating, and summarizing classified operational documents to provide actionable insights based on METT-TC factors. This assistant will reduce the likelihood of repeated mistakes, improve decision-making processes, and streamline knowledge sharing across military units.
 
-2.3 Summarization
-    •    The AI Agent shall generate concise summaries that highlight key actionable insights relevant to mission planning.
-    •    Summaries shall be structured to emphasize critical information, ensuring clarity and brevity for quick comprehension.
+3. Requirements
 
-2.4 Output Generation
-    •    The AI Agent shall produce summaries in plain text or PDF format, based on operational requirements.
-    •    It shall ensure the output is clear, focusing on readability and brevity to facilitate rapid understanding by frontline soldiers.
+Data Ingestion
 
-3. Implementation Details
+	•	Secure Document Handling: The system must securely accept and process classified documents, including After-Action Reports (AARs) in various formats (e.g., .docx, .pdf).
+	•	Comprehensive Extraction: Extract all textual content, including headers, footers, and embedded elements, ensuring no information is overlooked.
 
-3.1 Translation Engine
+Natural Language Processing
 
-Utilize the Restack AI translation engine for the translation component. The following code snippet demonstrates the integration:
+	•	Advanced Translation: Utilize NLP models trained in military terminology, including slang and idiomatic expressions.
+	•	METT-TC Analysis: Extract and summarize key insights based on METT-TC factors.
+	•	Language Support: Translate documents from foreign languages (e.g., Ukrainian) to English while preserving semantics and context.
+
+Query Interface
+
+	•	User-Friendly Interaction: Provide an intuitive natural language interface that allows users to query the system using spoken or typed language.
+	•	Context-Aware Responses: Support real-time, relevant answers to user inquiries.
+
+Security Compliance
+
+	•	Operational Levels: Operate within Impact Level 4 (IL4) to Impact Level 6 (IL6) security environments.
+	•	Data Protection: Ensure confidentiality, integrity, and availability of sensitive information throughout processing and storage.
+
+4. Features
+
+Secure Document Ingestion and Indexing
+
+	•	Implement secure channels for document upload.
+	•	Index ingested documents for efficient retrieval and analysis.
+
+Translation and Summarization
+
+	•	Translate operational reports to English accurately, maintaining military terminology.
+	•	Generate concise summaries highlighting key actionable insights relevant to METT-TC factors.
+
+Proactive Alerts and Adaptive Checklists
+
+	•	Provide proactive alerts for mission-critical information extracted from documents.
+	•	Generate adaptive checklists based on METT-TC analysis to aid mission planning and execution.
+
+Real-Time, Context-Aware Responses
+
+	•	Offer real-time assistance by answering user queries with relevant information.
+	•	Understand context to provide accurate and meaningful responses.
+
+5. Implementation Details
+
+Translation Engine
+
+Utilize the Restack AI translation engine for accurate translation of operational documents.
+
+Integration Code Snippet:
 
 from restack_ai.function import function, log
 from openai import OpenAI
@@ -35,46 +70,105 @@ import os
 
 @dataclass
 class FunctionInputParams:
-    user_prompt: str
+    user_prompt: str
 
 @function.defn()
 async def translate(input: FunctionInputParams):
-    try:
-        log.info("translate function started", input=input)
-        if not os.environ.get("OPENBABYLON_API_URL"):
-            raise Exception("OPENBABYLON_API_URL is not set")
+    try:
+        log.info("translate function started", input=input)
+        if not os.environ.get("OPENBABYLON_API_URL"):
+            raise Exception("OPENBABYLON_API_URL is not set")
 
-        client = OpenAI(api_key='openbabylon', base_url=os.environ.get("OPENBABYLON_API_URL"))
+        client = OpenAI(api_key='openbabylon', base_url=os.environ.get("OPENBABYLON_API_URL"))
 
-        messages = []
-        if input.user_prompt:
-            messages.append({"role": "user", "content": input.user_prompt})
-        print(messages)
-        response = client.chat.completions.create(
-            model="orpo-mistral-v0.3-ua-tokV2-focus-10B-low-lr-1epoch-aux-merged-1ep",
-            messages=messages,
-            temperature=0.0
-        )
-        log.info("translate function completed", response=response)
-        return response.choices[0].message
-    except Exception as e:
-        log.error("translate function failed", error=e)
-        raise e
+        messages = []
+        if input.user_prompt:
+            messages.append({"role": "user", "content": input.user_prompt})
+        print(messages)
+        response = client.chat.completions.create(
+            model="orpo-mistral-v0.3-ua-tokV2-focus-10B-low-lr-1epoch-aux-merged-1ep",
+            messages=messages,
+            temperature=0.0
+        )
+        log.info("translate function completed", response=response)
+        return response.choices[0].message
+    except Exception as e:
+        log.error("translate function failed", error=e)
+        raise e
 
-3.2 Summarization Algorithm
-    •    Implement algorithms capable of identifying and extracting key information pertinent to military operations.
-    •    Ensure the summarization process retains critical details while reducing verbosity.
+Summarization Algorithm
 
-4. Performance and Efficiency
-    •    The AI Agent shall process and generate summaries within a reasonable timeframe to support operational needs.
-    •    It shall maintain high accuracy, preserving the original report’s intent and context.
+	•	Implement algorithms capable of extracting key METT-TC insights from documents.
+	•	Use machine learning models trained on military operational data to identify critical information.
+	•	Ensure summaries are concise and emphasize mission-critical details.
 
-5. Security and Compliance
-    •    The AI Agent shall comply with military data security standards, ensuring confidentiality and integrity of sensitive information.
-    •    It shall handle varying volumes of AARs without performance degradation.
+Flow Integration
 
-6. Target Audience
-    •    The final output shall cater to frontline soldiers who prioritize speed and clarity in operational briefings.
-    •    The AI Agent shall ensure the summaries are easily digestible, avoiding lengthy, technical jargon that could confuse the end-user.
+Map sequence diagram roles to system components to ensure seamless operation.
 
-By adhering to these requirements, the AI Agent will effectively translate and summarize Ukrainian AARs, providing frontline soldiers with clear, actionable insights in a timely manner.
+Technical Architecture
+
+	•	TranslationAgent: Handles document translation.
+	•	PreprocessingAgent: Processes raw data for analysis.
+	•	DataIngestionAPI: Manages secure data ingestion.
+	•	PromptEngine: Generates prompts for the LLM based on user queries.
+	•	LLM (Large Language Model): Performs natural language understanding and generates responses.
+	•	RAGSystem (Retrieval-Augmented Generation System): Enhances responses with retrieved data.
+	•	ChatbotInterface: User-facing interface for interactions.
+
+6. Sequence Diagram Integration
+
+Workflow Description
+
+	1.	Document Ingestion: Users upload classified documents via the DataIngestionAPI.
+	2.	Preprocessing: The PreprocessingAgent extracts and cleans the data.
+	3.	Translation: The TranslationAgent translates documents into English.
+	4.	Indexing: Processed documents are indexed for retrieval.
+	5.	User Query: The user interacts with the ChatbotInterface, submitting a query.
+	6.	Prompt Generation: The PromptEngine formulates a prompt for the LLM.
+	7.	Response Generation: The LLM generates a response, augmented by the RAGSystem.
+	8.	Delivery: The ChatbotInterface presents the response to the user.
+
+Component Roles
+
+	•	TranslationAgent: Translates documents, enabling analysis of non-English reports.
+	•	PromptEngine: Crafts prompts that guide the LLM to produce relevant responses.
+	•	RAGSystem: Enhances LLM outputs with specific data from the indexed documents.
+	•	ChatbotInterface: Provides a user-friendly interface for interaction and displays results.
+
+7. Target Audience
+
+Users
+
+	•	Frontline soldiers requiring quick access to operational insights.
+	•	Mission planners needing detailed analysis of METT-TC factors.
+	•	Intelligence officers analyzing operational reports for strategic planning.
+
+Needs
+
+	•	Rapid retrieval of critical information.
+	•	Clear, concise summaries without unnecessary technical jargon.
+	•	An intuitive interface that requires minimal training.
+
+8. Performance & Security
+
+Processing Speed
+
+	•	Generate translations and summaries promptly to support time-sensitive operations.
+	•	Optimize algorithms for efficiency without compromising accuracy.
+
+Compliance
+
+	•	Adhere strictly to military data security protocols (IL4-IL6).
+	•	Implement robust encryption for data at rest and in transit.
+	•	Ensure regular security audits and compliance checks.
+
+Sequence Diagram Mapping
+
+Each component of the sequence diagram corresponds to the following PRD sections:
+	•	TranslationAgent: Maps to the Translation Engine in Implementation Details.
+	•	PreprocessingAgent and DataIngestionAPI: Addressed under Requirements (Data Ingestion).
+	•	PromptEngine, LLM, and RAGSystem: Linked to Features (Query Interface and Proactive Assistance).
+	•	ChatbotInterface: Tied to Target Audience and usability goals.
+
+By developing this AI Assistant, military personnel will have enhanced capabilities to access and analyze critical operational data swiftly and securely, leading to more informed decision-making and increased mission success rates.

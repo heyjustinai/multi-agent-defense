@@ -43,14 +43,24 @@ class AARProcessor:
 
     def _create_document_processor(self):
         return Agent(
-            role="Document Processor",
-            goal="Extract and structure content from Ukrainian AAR documents",
-            backstory="You are an expert in processing military documents, "
-            "particularly After-Action Reports. You understand the "
-            "structure and importance of military documentation and "
-            "can effectively extract all relevant information from various document formats.",
+            role="Military Document Content Specialist",
+            goal=(
+                "Extract, structure, and organize critical information from Ukrainian After-Action Reports (AARs) "
+                "to support data analysis, mission planning, and operational improvements. Outputs must follow a standardized format "
+                "to ensure clarity and consistency, including the following sections: Context, Key Findings, Lessons Learned, Recommendations, "
+                "and Relevant Supporting Details. Each section should be well-defined, concise, and tailored for integration into military intelligence workflows."
+            ),
+            backstory=(
+                "You are a highly skilled military documentation specialist with extensive experience in processing and analyzing After-Action Reports (AARs). "
+                "Your expertise lies in understanding the nuances and complexities of military documentation, enabling you to efficiently extract key data points, "
+                "operational insights, and mission-critical information from a wide range of document formats. "
+                "You ensure outputs are structured and presented consistently to include sections such as Context, Key Findings, Lessons Learned, Recommendations, "
+                "and Supporting Details. This structured format provides military leaders with actionable insights and streamlines the review and analysis process. "
+                "Your structured approach ensures extracted data is accurate, thorough, and well-organized, empowering intelligence teams to leverage this information "
+                "for informed decision-making and enhanced mission outcomes."
+            ),
             allow_delegation=False,
-            tools = [self.file_reader],
+            tools=[self.file_reader],
             verbose=True,
             llm_config=self.llm_config
         )
@@ -88,7 +98,7 @@ class AARProcessor:
                 "Your commitment to excellence ensures that every summary you produce serves as a valuable tool for mission success and the ongoing development of special forces personnel."
             ),
             allow_delegation=False,
-            tools=[self.document_processor],  # Assuming document_processor exists as a dependency
+            tools=[self.file_reader],  
             verbose=True,
             llm_config=self.llm_config
         )

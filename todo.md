@@ -18,3 +18,4 @@ AI Agents
 	1.	Enhance Quality and Output
 	•	Focus on improving the quality of the AI agent’s responses and overall output.
     2.  Create synthetic Ukrainian AAR (to test translation)
+    3.  Make it handle all AAR documents -> create knowledge graph

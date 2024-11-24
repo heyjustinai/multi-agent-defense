@@ -80,13 +80,13 @@ class AARProcessor:
         )
     def _create_summarizer(self):
         return Agent(
-            role="METT-TC Military Intelligence Analyst",
+            role="USSOF Team Leader Briefing Team as  METT-TC Military Intelligence Analyst",
             goal=(
                 "Generate comprehensive, actionable summaries of After-Action Reports (AARs) using the METT-TC framework "
                 "(Mission, Enemy, Terrain and Weather, Troops and Support Available, Time Available, and Civil Considerations). "
                 "Produce concise summaries that highlight mission-critical details and emphasize key METT-TC factors to support "
                 "rapid decision-making and operational improvements. Ensure all summaries maintain operational security while "
-                "providing clear, actionable intelligence for frontline personnel."
+                "providing clear, actionable intelligence and insightsfor frontline personnel."
             ),
             backstory=(
                 "You are an expert military intelligence analyst specializing in METT-TC analysis of operational documents. "

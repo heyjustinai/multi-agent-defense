@@ -48,3 +48,15 @@
 | Total Crew Time | 23.97 |
 | Total Processing | 23.97 |
 
+
+## Run at 2024-11-24 13:22:46 - sample_aar.md
+
+| Step | Time (seconds) |
+|------|----------------|
+| Document Extraction (.md) | 0.00 |
+| Task 1: Process and structure the extracted document content | 44.40 |
+| Task 2: Translate the structured content from Ukrainian to English | 44.40 |
+| Task 3: Create a concise, actionable summary | 44.40 |
+| Total Crew Time | 44.41 |
+| Total Processing | 44.41 |
+

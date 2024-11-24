@@ -1,27 +1,23 @@
-{
-"Context": "This AAR is about the Communications Training, Core Tasks (CT) Phase from 22 October 2015, written by CAPTAIN JEFFREY D. WRIGHT. He suggests changes for the continued development and enhancement of communications training during the CT phase of Advanced Skills Training (AST).",
-"Key Findings": [
-"The communications training in CT is intense, thorough, and well-taught, but isn't allocated enough time. Important subjects are not covered due to time constraints.",
-"A total of 10 training days were allocated, which is deemed insufficient.",
-"Several critical training topics, such as SINCGARS waveforms, field expedient antennae, directional antennae, vehicular communications, high frequency, and kit construction, are not taught.",
-"Instructors apply pressure on students to teach them to troubleshoot under pressure, though this sometimes borders on disrespect."
-],
-"Lessons Learned": [
-"Without the ability to communicate, a CCT is at best a rifleman.",
-"The training scope needs expansion and depth.",
-"Troubleshooting needs more emphasis during the training phase.",
-"Repetitive practice on the same type of frequency is not improving the learning outcomes."
-],
-"Recommendations": [
-"Expand the training by at least 5 days.",
-"Teach the uncovered topics like field-expedient and directional antennae, VRC-110 system, SINCGARS waveforms, etc.",
-"Instructors should keep applying pressure on students but also maintain professionalism.",
-"Special training event to teach troubleshooting to a higher standard.",
-"Adding more variety in frequencies for practice, such as SINCGARS."
-],
-"Relevant Supporting Details": [
-"CCTs are asked to perform various missions where communication is the vital factor.",
-"To check the viability of their individual kit, physical training evolutions should be created that require students to shoot, move, and communicate.",
-"Practice makes permanent and students need experience on fundamentals. However, they should also be exposed to more variety."
-]
-}
+- Context: This After-Action Report pertains to a communications training session during the Core Tasks phase of Advanced Skills Training. The author, CAPTAIN JEFFREY D. WRIGHT, makes several key observations and recommendations to improve the structure and content of said training.
+
+- Key Findings: 
+   - The training sufficiently covers core topics, but there's a sacrifice of breadth and depth for essential topic retention. 
+   - The importance of communications to the career field is undermined by the limited time and resources dedicated to it.
+   - Some communication skills like SINCGARS waveforms and kit construction were not covered.
+
+- Lessons Learned: 
+   - More time should be allocated to essential training.
+   - Valuable skills are being overlooked in the training curriculum.
+   - Practising the same type of frequency has diminishing returns. 
+
+- Recommendations: 
+  - Extend the communications training by at least five additional days.
+  - Include SINCGARS waveforms and kit construction in the curriculum.
+  - Maintain high-pressure training but ensure it remains respectful.
+  - Implement a higher standard for troubleshooting training, with a specific process.
+  - Diminish repetitiveness by diversifying frequency types.
+
+- Relevant Supporting Details: 
+  - The training fails to teach certain skills such as SINCGARS waveforms, vehicular communications, field expedient antennae, and kit construction. 
+  - Unprofessional conduct occurred during the high-pressure training.
+  - Troubleshooting education for hardware was lacking, despite good programming troubleshooting instruction.

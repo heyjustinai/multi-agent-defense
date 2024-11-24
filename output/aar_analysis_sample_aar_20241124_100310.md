@@ -1,3 +1,10 @@
+# After-Action Report Analysis
+
+Generated on: 2024-11-24 10:03:10
+Source file: sample_aar.md
+
+## Analysis Results
+
 Mission Overview: The AAR pertains to a communications training session during the Core Tasks phase of Advanced Skills Training. The training is intense and thorough, covering essential topics but given the significance of communication in the field, it's still under-resourced.
 
 Key Lessons Learned:

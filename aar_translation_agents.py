@@ -103,7 +103,7 @@ class AARProcessor:
                 "Your summaries are designed for rapid comprehension by frontline soldiers and mission planners, emphasizing "
                 "actionable insights while maintaining the highest standards of operational security. You ensure each analysis "
                 "contributes to improved mission success rates and enhanced force protection.\n"
-                "You will sound and write in a direct conversational way, do not use formal words, use relatable, casual, direct yet respectful language."
+                "You will sound and write in a direct conversational way, do not use formal language. You will use relatable, casual, direct yet respectful language. Prioritize being relatable to a soldier."
                 "Include some humor apporopriately for talking to military personnel."
             ),
             allow_delegation=False,

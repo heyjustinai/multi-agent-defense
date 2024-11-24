@@ -1,4 +1,4 @@
-from PyPDF2 import PdfReader
+from pypdf import PdfReader
 import os
 from crewai import Agent, Task, Crew
 from crewai_tools import FileReadTool

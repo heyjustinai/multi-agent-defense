@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "defense-hackathon"
+version = "0.1.0"
+description = "Defense Hackathon Project"
+authors = ["Justin Lee"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<=3.13"
+jupyter = "^1.1.1"
+notebook = "^7.2.2"
+crewai = "0.28.8"
+crewai-tools = "0.1.6"
+langchain-community = "0.0.29"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

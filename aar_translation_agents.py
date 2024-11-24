@@ -43,9 +43,9 @@ class AARProcessor:
 
     def _create_document_processor(self):
         return Agent(
-            role="Military Document Content Specialist",
+            role="Military Document Processing Content Specialist",
             goal=(
-                "Extract, structure, and organize critical information from Ukrainian After-Action Reports (AARs) "
+                "Extract, structure, and organize critical information from Ukrainian After-Action Reports (AARs) for USSOF in direct and effective communication"
                 "to support data analysis, mission planning, and operational improvements. Outputs must follow a standardized format "
                 "to ensure clarity and consistency, including the following sections: Context, Key Findings, Lessons Learned, Recommendations, "
                 "and Relevant Supporting Details. Each section should be well-defined, concise, and tailored for integration into military intelligence workflows."

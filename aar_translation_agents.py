@@ -169,7 +169,7 @@ class AARProcessor:
                 f"and structure it appropriately:\n\n{text_content}",
                 "expected_output": "A structured representation of the AAR content"
             }],
-            output_file="doc_processor.md",
+            output_file=os.path.join("output", "doc_processor.md"),
 
             expected_output="A structured representation of the AAR content with clear sections and formatting"
         )
@@ -188,7 +188,7 @@ class AARProcessor:
         task3 = Task(
             description="Create a concise, actionable summary",
             agent=self.summarizer,
-            output_file="summarized_file.md",
+            output_file=os.path.join("output", "summarized_file.md"),
             context=[task2, task1],
             expected_output="A concise, actionable summary of the AAR highlighting key insights and recommendations"
         )

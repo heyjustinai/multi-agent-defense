@@ -11,11 +11,12 @@ import time
 class AARProcessor:
     def __init__(self, openai_api_key: Optional[str] = None):
         load_dotenv()
+        OMNISTACK_API_KEY = os.getenv("OMNISTACK_API_KEY")
         
         # Initialize OpenAI client with Omnistack configuration
         self.client = OpenAI(
             base_url="https://api.omnistack.sh/openai/v1",
-            api_key="osk_f6ffd2937fdacb98de5a3c37e128e89d"
+            api_key=OMNISTACK_API_KEY
         )
 
         # Initialize agents with Omnistack configuration
@@ -152,11 +153,7 @@ class AARProcessor:
         task2 = Task(
             description="Translate the structured content from Ukrainian to English",
             agent=self.translator,
-            context=[{
-                "description": "Translate the structured AAR content",
-                "input": "{{previous_task.output}}",
-                "expected_output": "An accurate English translation"
-            }],
+            context=[task1],
             expected_output="An accurate English translation of the AAR that maintains military terminology and context"
         )
         tasks.append(task2)
@@ -166,27 +163,10 @@ class AARProcessor:
             description="Create a concise, actionable summary",
             agent=self.summarizer,
             output_file="summarized_file.md",
-            context=[{
-                "description": "Create a summary of the translated AAR",
-                "input": "{{previous_task.output}}",
-                "expected_output": "A concise, actionable summary"
-            }],
+            context=[task2, task1],
             expected_output="A concise, actionable summary of the AAR highlighting key insights and recommendations"
         )
         tasks.append(task3)
-
-        # # Task 4: Quality Check
-        # task4 = Task(
-        #     description="Verify translation and summary quality",
-        #     agent=self.quality_checker,
-        #     context=[{
-        #         "description": "Review the translation and summary",
-        #         "input": "{{previous_task.output}}",
-        #         "expected_output": "A quality assessment report"
-        #     }],
-        #     expected_output="A confirmation that the translation and summary meet quality standards"
-        # )
-        # tasks.append(task4)
 
         # Create and run the crew
         crew_start_time = time.time()

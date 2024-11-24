@@ -1,3 +1,10 @@
+# After-Action Report Analysis
+
+Generated on: 2024-11-23 23:20:42
+Source file: test.md
+
+## Analysis Results
+
 ```markdown
 # MEMORANDUM FOR RECORD
 

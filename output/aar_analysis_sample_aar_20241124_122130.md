@@ -1,4 +1,10 @@
-```
+# After-Action Report Analysis
+
+Generated on: 2024-11-24 12:21:30
+Source file: sample_aar.md
+
+## Analysis Results
+
 **After Action Report (AAR)**  
 **Subject:** Communications Training, Core Tasks (CT) Phase  
 **From:** Captain Jeffrey D. Wright  
@@ -40,5 +46,4 @@ This AAR documents insights and suggestions for enhancing communications trainin
 
 **Prepared by:**  
 JEFFREY D. WRIGHT, Capt, USAF  
-**Position:** Special Tactics Officer  
-```
+**Position:** Special Tactics Officer

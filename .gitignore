@@ -64,3 +64,11 @@ htmlcov/
 # Logs
 *.log
 logs/
+
+# Documentation
+docs/
+**/docs/
+
+# UV
+.uv/
+.venv/

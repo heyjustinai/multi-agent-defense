@@ -1,17 +1,17 @@
 [tool.poetry]
-name = "defense-hackathon"
+name = "multi-agent-defense"
 version = "0.1.0"
-description = "Defense Hackathon Project"
-authors = ["Justin Lee"]
+description = "AI Agents for Ukrainian AAR Translation and Summarization"
+authors = ["Your Name <your.email@example.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = ">=3.10,<=3.13"
-jupyter = "^1.1.1"
-notebook = "^7.2.2"
 crewai = "0.28.8"
 crewai-tools = "0.1.6"
 langchain-community = "0.0.29"
+pypdf2 = "^3.0.0"
+python-dotenv = "^1.0.0"
 
 [build-system]
 requires = ["poetry-core"]

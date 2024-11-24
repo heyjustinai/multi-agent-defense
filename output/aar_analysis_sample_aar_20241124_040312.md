@@ -1,3 +1,10 @@
+# After-Action Report Analysis
+
+Generated on: 2024-11-24 04:03:12
+Source file: sample_aar.md
+
+## Analysis Results
+
 Mission Overview:
 Radios are an indispensable part of the mission, no matter what it is. Communications training in CT is intense, thorough, and well taught but this training block is under-resourced despite the importance of communications to the career field. 
 

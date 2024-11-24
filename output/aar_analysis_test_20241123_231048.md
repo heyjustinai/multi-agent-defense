@@ -1,3 +1,10 @@
+# After-Action Report Analysis
+
+Generated on: 2024-11-23 23:10:48
+Source file: test.md
+
+## Analysis Results
+
 22 October 2015
 
 MEMORANDUM FOR RECORD

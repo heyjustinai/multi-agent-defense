@@ -25,7 +25,7 @@ class AARProcessor:
         }
 
         # Initialize FileReadTool
-        self.file_reader = FileReadTool(file_path='./docs/test.md')
+        self.file_reader = FileReadTool(file_path='./AAR/clean/USSOF/JDW_CT_Comms_AAR.md')
 
         # Initialize agents
         self.document_processor = self._create_document_processor()
@@ -71,6 +71,7 @@ class AARProcessor:
             "soldiers and can present it in a clear, structured format "
             "that enables quick decision-making.",
             allow_delegation=False,
+            tools = [self.file_reader],
             verbose=True,
             llm_config=self.llm_config
         )
@@ -141,6 +142,8 @@ class AARProcessor:
                 f"and structure it appropriately:\n\n{text_content}",
                 "expected_output": "A structured representation of the AAR content"
             }],
+            output_file="doc_processor.md",
+
             expected_output="A structured representation of the AAR content with clear sections and formatting"
         )
         tasks.append(task1)
